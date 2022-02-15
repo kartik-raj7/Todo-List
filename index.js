@@ -1,29 +1,31 @@
-let myleads=[]
+let myLeads = []
+const inputEl = document.getElementById("input-el")
+const inputBtn = document.getElementById("input-btn")
+const ulEl = document.getElementById("ul-el")
+let leadsFromLocalStorage = JSON.parse( localStorage.getItem("myLeads") )
 
-const inputEl = document.getElementById("inputE")
-const inputBTN = document.getElementById("input-btn")
-const ulEl = document.getElementById("ulel")
-inputBTN.addEventListener("click",function(){
-    myleads = JSON.parse(myleads)
-    inputEl.value = ''
-    myleads.push(inputEl.value)
-    localStorage.setItem("myleads",JSON.stringify(myleads))
-    render()
-    
+if (leadsFromLocalStorage) {
+    myLeads = leadsFromLocalStorage
+    renderLeads()
+}
 
+inputBtn.addEventListener("click", function() {
+    myLeads.push(inputEl.value)
+    inputEl.value = ""
+    localStorage.setItem("myLeads", JSON.stringify(myLeads) )
+    renderLeads()
 })
 
-let listitems = ""
-let i = 0
-function render(){
-for(; i<myleads.length; i++){
-    listitems += `<li>
-    <a target='_blank' href='${myleads[i]}'>
-        ${myleads[i]}
-    </a>
-    </li>
-    `
-    
-}
-ulEl.innerHTML = listitems
+function renderLeads() {
+    let listItems = ""
+    for (let i = 0; i < myLeads.length; i++) {
+        listItems += `
+            <li>
+                <a target='_blank' href='${myLeads[i]}'>
+                    ${myLeads[i]}
+                </a>
+            </li>
+        `
+    }
+    ulEl.innerHTML = listItems  
 }
