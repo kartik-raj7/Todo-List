@@ -3,6 +3,9 @@ body {
     padding: 10px;
     font-family: Arial, Helvetica, sans-serif;
     min-width: 400px;
+    background-image: url("4317845.jpg");
+    text-align: center;
+    
 }
 
 input {
@@ -10,7 +13,7 @@ input {
     padding: 10px;
     box-sizing: border-box;
     border: 1px solid #5f9341;
-    margin-bottom: 4px;
+    margin-bottom: 10px;
 }
 
 button {
@@ -19,12 +22,17 @@ button {
     padding: 10px 20px;
     border: none;
     font-weight: bold;
+    margin-bottom: 10px;
 }
 
 /* Style the button according to the provided design */
 
 #delete-btn {
-    
+    background: white;
+    color: #5f9341;
+    padding: 10px 20px;
+    border: 1px solid #5f9341;
+    font-weight: bold; 
 }
 
 ul {
@@ -35,8 +43,13 @@ ul {
 
 li {
     margin-top: 5px;
+    margin-bottom: 25px;
+    text-align: left;
+    margin-left: 75px;
 }
 
 a {
-    color: #5f9341;
+    color: black;
+    font-size: 20px;
+    margin-bottom: 20px;
 }
