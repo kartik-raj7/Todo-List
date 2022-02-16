@@ -14,6 +14,7 @@ input {
     box-sizing: border-box;
     border: 1px solid #5f9341;
     margin-bottom: 10px;
+    margin-top: 2px;
 }
 
 button {
@@ -36,7 +37,7 @@ button {
     font-weight: bold; 
 }
 
-ul {
+ol {
     margin-top: 20px;
     list-style: none;
     padding-left: 0;
@@ -46,11 +47,24 @@ li {
     margin-top: 5px;
     margin-bottom: 25px;
     text-align: left;
-    margin-left: 75px;
+    margin-left: 28px;
+    font-size: 20px;
 }
 
-a {
+/*a {
     color: black;
     font-size: 20px;
     margin-bottom: 20px;
-}
+}*/
+
+#clock {
+    font-size: 15px;
+    width: 100px;
+    height: 20px;
+    margin-top: -55px;
+    margin-bottom: 30px;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 20px;
+    background-color: #5f9341;
+  }
