@@ -18,7 +18,8 @@ if (leadsFromLocalStorage) {
 }
 
 inputBtn.addEventListener("click", function() {
-    myLeads.push(inputEl.value)
+    if(inputEl.value!=""){
+    myLeads.push(inputEl.value)}
     inputEl.value = ""
     localStorage.setItem("myLeads", JSON.stringify(myLeads) )
     renderLeads()
@@ -27,7 +28,7 @@ inputBtn.addEventListener("click", function() {
 function renderLeads() {
     let listItems = ""
     for (let i = 0; i < myLeads.length; i++) {
-        listItems += `<li>${myLeads[i]}<span class="icon" onclick="deleteTask(${i})"><i class="   fas fa-trash"></i></span></li>`;
+        listItems += `<li>${myLeads[i]}<span class="icon" onclick="deleteTask(${i})">✅</i></span></li>`;
     }
     ulEl.innerHTML = listItems  
 }

@@ -71,3 +71,13 @@ li {
     border-radius: 20px;
     background-color: #5f9341;
   }
+  #input-btn:hover{
+    color:#5f9341;
+    background-color: white;
+    border: 1px solid #5f9341;
+  }
+  #delete-btn:hover{
+      color:white;
+    background-color: crimson;
+    border: 1px solid crimson;
+  }
