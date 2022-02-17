@@ -27,15 +27,15 @@ inputBtn.addEventListener("click", function() {
 function renderLeads() {
     let listItems = ""
     for (let i = 0; i < myLeads.length; i++) {
-        listItems += `
-            <li>
-                ${myLeads[i]}
-                
-            </li>
-        `
+        listItems += `<li>${myLeads[i]}<span class="icon" onclick="deleteTask(${i})"><i class="   fas fa-trash"></i></span></li>`;
     }
     ulEl.innerHTML = listItems  
 }
+function deleteTask(i){
+    myLeads.splice(i, 1);
+    localStorage.setItem("ul-el", JSON.stringify(myLeads));
+    renderLeads();
+  }
 
 
 setInterval(showTime, 1000);
