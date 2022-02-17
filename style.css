@@ -56,7 +56,10 @@ li {
     font-size: 20px;
     margin-bottom: 20px;
 }*/
-
+.icon{
+    color:#81c7e8;
+    margin-left: 50px;
+}
 #clock {
     font-size: 15px;
     width: 100px;
