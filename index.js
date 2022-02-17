@@ -38,8 +38,6 @@ function renderLeads() {
 }
 
 
-
-
 setInterval(showTime, 1000);
 function showTime() {
 	let time = new Date();
