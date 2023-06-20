@@ -1,6 +1,10 @@
 <h1 align="center">📋 Todo List Chrome Extension</h1>
 
-<!-- <img src="public/Demo/Demo.png" alt="dashboard" /> -->
+<div style="overflow: auto" align="center" >
+  
+<img align="center" src="demo.png" alt="dashboard"  width="450" height="450"/>
+
+</div>
 
 <div align="center">
 
