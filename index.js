@@ -1,4 +1,4 @@
-let myLeads;
+let myLeads =[];
 const inputEl = document.getElementById("input-el");
 const inputBtn = document.getElementById("input-btn");
 const ulEl = document.getElementById("ul-el");
@@ -26,7 +26,7 @@ inputBtn.addEventListener("click", function() {
 });
 
 ulEl.addEventListener("click", function(event) {
-    if (event.target.classList.contains("delete-icon")) {
+    if (event.target.classList.contains("complete-icon")) {
         const index = event.target.dataset.index;
         deleteTask(index);
     } else if (event.target.classList.contains("edit-icon")) {
@@ -38,8 +38,11 @@ ulEl.addEventListener("click", function(event) {
             editTask(index, newTask);
         }
     }
+    else if (event.target.classList.contains("remove-icon")) {
+        const index = event.target.dataset.index;
+        deleteTask(index);
+    } 
 });
-
 ulEl.addEventListener("dragstart", function(event) {
     event.dataTransfer.setData("text/plain", event.target.dataset.index);
 });
@@ -91,8 +94,9 @@ function renderLeads() {
         listItems += `
             <li data-index="${i}" draggable="true">
                 <span class="task">${myLeads[i]}</span>
-                <span class="icon delete-icon">✅</span>
+                <span class="icon complete-icon">✅</span>
                 <span class="icon edit-icon">🖊️</span>
+                <span class="icon remove-icon">❌</span>
             </li>
         `;
     }
@@ -153,6 +157,8 @@ const downloadBtn = document.getElementById("download-btn");
 downloadBtn.addEventListener("click", downloadAsCSV);
 
 function downloadAsCSV() {
+  if(myLeads.length!==0){
+//   console.log(myLeads)
   const csvContent = prepareCSVContent(myLeads);
   const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
   const url = URL.createObjectURL(blob);
@@ -163,6 +169,7 @@ function downloadAsCSV() {
   downloadLink.click();
   document.body.removeChild(downloadLink);
   URL.revokeObjectURL(url);
+  }
 }
 function prepareCSVContent(data) {
    

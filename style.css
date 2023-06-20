@@ -16,7 +16,10 @@ input {
     margin-bottom: 10px;
     margin-top: 2px;
 }
-
+.completed {
+    background-color: lightgreen;
+    transition: background-color 0.5s;
+}
 button {
     background: #5f9341;
     color: white;
