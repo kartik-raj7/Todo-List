@@ -7,14 +7,26 @@
     <link rel="icon" type="image/png" sizes="favicon-32x32" href="/favicon-32x32.png">
     <link rel = "stylesheet" href = "style.css">
     <script src="index.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
     <title>TODO LIST🎯</title>
 </head>
 <body>
-    <h1>TODO LIST 🎯</h1>
+    <div id="heading">
     <div id ="clock">TODO</div>
+    <h1>TODO LIST 🎯</h1>
+    <div></div>
+    </div>
+    <div id="quote-container" class="quote">
+        <h5 >Quote for the Day:-</h5>
+        <p id="quote"></p>
+      </div>
+    
     <input type="text" placeholder="Add your new task here"id="input-el">
-    <button id="input-btn">SAVE INPUT</button>
+    <div id="buttons-toggle">
+    <button id="input-btn">ADD TASK</button>
     <button id="delete-btn">DELETE ALL</button>
+    <button id="download-btn">📄Download</button>
+</div>
     <ul id="ul-el">
     </ul>
     

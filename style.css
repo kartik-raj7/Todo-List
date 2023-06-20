@@ -25,6 +25,7 @@ button {
     font-weight: bold;
     margin-bottom: 40px;
     margin-left: 20px;
+    border-radius: 12px;
 }
 
 /* Style the button according to the provided design */
@@ -35,6 +36,7 @@ button {
     padding: 10px 20px;
     border: 1px solid crimson;
     font-weight: bold; 
+    border-radius: 12px;
 }
 
 ol {
@@ -49,6 +51,7 @@ li {
     text-align: left;
     margin-left: 28px;
     font-size: 20px;
+    font-family: 'Indie Flower', cursive;
 }
 
 /*a {
@@ -56,16 +59,22 @@ li {
     font-size: 20px;
     margin-bottom: 20px;
 }*/
-.icon{
+#icon{
     color:#81c7e8;
-    margin-left: 50px;
+    margin-left: 10px;
+}
+#heading{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 #clock {
     font-size: 15px;
-    width: 100px;
+    width: 140px;
     height: 20px;
-    margin-top: -46px;
-    margin-bottom: 30px;
+    /* margin-top: -46px;
+    margin-bottom: 30px; */
     text-align: center;
     border: 2px solid black;
     border-radius: 20px;
@@ -80,4 +89,35 @@ li {
       color:white;
     background-color: crimson;
     border: 1px solid crimson;
+  }
+  #download-btn{
+    background-color: #81c7e8;
+    border: 1px solid blueviolet;
+    color: black;
+    border-radius: 12px;
+  }
+  #download-btn:hover{
+    background-color: aliceblue;
+    color:#81c7e8;
+    border: 1px solid black;
+  }
+  #buttons-toggle{
+    display: flex;
+    flex-direction: row;
+  }
+  #quote-container{
+    color:black;
+    display: flex;
+    justify-content: center;
+  }
+  p{
+    font-family: 'Indie Flower', cursive;
+  }
+  #quote{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  h5{
+    margin-right:10px;
   }
